@@ -13,3 +13,4 @@ word = word.lower
 space = list(word)
 dash = []
 dash.extend(word)
+
