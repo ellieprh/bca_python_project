@@ -12,14 +12,15 @@ Created on Wed Sep 23 10:12:49 2020
 
 class Person():
     def __init__(self, name, birthyear, birthmonth, birthdate):
-        import datetime
         self.name = name
-        self.birth_day = datetime.datetime(birthyear, birthmonth, birthdate)
+        self.birth_year = birthyear, 
+        self.birth_month = birthmonth
+        self.birth_date = birthdate
+    
         
     # Define greeting function
     def greeting(self):
         return f'Hello {self.name}.'
-    import datetime
     
     
     
@@ -27,9 +28,8 @@ class Person():
     def seconds(self):
         import datetime
         current_time = datetime.datetime.now()
-        current_year = current_time.year
-        
-        time = (current_year - self.birth_day) * 60 * 60 * 24 * 365.25
+        my_birthdate = datetime.datetime(self.birth_year, self.birth_month, self.birth_date
+        current_seconds = (current_year - self.birth_day) * 60 * 60 * 24 * 365.25
         return f'{self.name} have spent {time} seconds on Earth'
         
 ellie = Person('Ellie', 2006, 8, 26)
